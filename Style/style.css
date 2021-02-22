@@ -1,0 +1,410 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+
+body{
+    background-color: rgba(128, 128, 128, 0.2);}
+
+/* Header */
+
+#headerTop{
+    display: flex;
+    background-color: rgb(40,55,66);
+    color: white;
+    padding-top: 5px;
+    position: relative;}
+
+#headerTop > h1, h2, a{
+    font-size: 15px;
+    padding-left: 0.5%;}
+
+.new{
+    text-decoration: none;
+    color: rgba(195, 255, 92);
+    position: absolute;
+    opacity: 0;}
+
+.selected{ 
+    opacity: 1; transition: 1s;}
+
+#headerImg{
+    height: 250px;
+    width: 100%;
+    background-color: rgba(40,55,66);
+    background-image: url("/Images/ringFireBlue.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;}
+
+/* Menu */
+
+.menu{
+    padding:  10px 0px 10px 0px;
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    border-bottom: 2px solid rgb(255, 255, 255, 0.5);
+    position: relative;}
+
+.subMenu{   
+    background-color: rgba(0, 0, 0, 0.7);
+    box-sizing: border-box;
+    margin-top: 8px;
+    text-align: left;
+    width: 150px;}
+
+.subMenu > li, .subMenu2 > li{
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding: 10px;}
+
+.subMenu2{
+    text-align: left;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-left: 10px;
+    width: 100%;}
+
+.menu, .subMenu, .subMenu2{
+    list-style: none;}
+
+.subMenu, .subMenu2{
+    position: absolute;
+    display: none;}
+
+.menu li:hover > ul{
+    display: block;}
+
+.menu ul ul{
+    margin-left: calc(100% - 10px);
+    margin-top: -15%;}
+
+.itemMenu{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 10px;}
+
+.itemSubMenu{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;}
+
+.itemSubMenu2{
+    width: 100%;
+    text-align: left;
+    padding: 0;
+    font-size: 15px;
+    text-decoration: none;
+    color: white;}
+
+.itemMenu:hover{
+    color: rgb(195,255,92);
+    transition: 0.5s;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 5px;}
+
+.itemSubMenu:hover, .itemSubMenu2:hover{
+    color: rgb(195,255,92);
+    transition: 0.5s;}
+
+.iconMenu::after{
+    content: url("../Images/down.png");
+    padding-left: 5px;}
+
+.iconSubMenu::after{
+    content: url("../Images/right.png");}
+
+
+
+/* Grid */
+
+#container{
+    display: grid;
+    grid-gap: 0px 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 4%;
+    margin-left: 1%;
+}
+
+/* Post */
+
+#post{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    width: 100%;
+    border-radius: 10px; }
+
+#post1{
+    grid-column-start: 2;
+    grid-column-end: 3;}
+
+.containerPost{
+    margin-bottom: 15px;
+    box-shadow: 1px 1px 10px 1px rgb(56,78,112);
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    padding: 0px 0px 20px 0px;}
+
+.postItem{
+    background-color: rgb(47,175,229);
+    width: auto;
+    color: white;
+    padding: 5px 0px 5px 0px;
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 900;}
+
+.postItem1{
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    margin-left: 5px;}
+
+.ctr1, .ctr2, .ctr3{
+    display: inline;
+    margin-left: 5px;}
+
+.postItem2, .postItem3, .postItem4{
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: 500;}
+
+.postItem5{
+    font-size: 16px;
+    font-weight: 300;
+    margin-left: 5px;
+    padding-top: 5px;
+    margin-bottom: 10px;}
+
+.postItem6{
+    background-color: rgb(56,78,112);
+    color: white;
+    text-decoration: none;
+    padding:  10px;
+    font-weight: 600;}
+
+.postItem6a{
+    margin-top: 15px;}
+
+.containerPost > p {
+    text-align: center;}
+
+.containerPost:hover{
+    box-shadow: none;
+    border-right: 1px solid rgb(128, 128, 128, 0.2);
+    border-bottom: 1px solid rgb(128, 128, 128, 0.2);
+    border-left: 1px solid rgb(128, 128, 128, 0.2);
+    border-radius: 10px;
+    transition: 0.6s;}
+
+.postItem1:hover, .postItem2:hover, .postItem3:hover, .postItem4:hover{
+    color: rgb(124, 180, 27);
+    transition: 0.2s;}
+
+.postItem6:hover{
+    background-color: rgb(47,175,229);
+    transition: 0.5s;
+    border-radius: 10px;}
+
+.ctr1::before{
+    content: url("/Images/agenda.png");}
+
+.ctr2::before{
+    content: url("/Images/boneco.png");}
+
+.ctr3::before{
+    content: url("/Images/balao.png");}
+
+/* columnRight */
+
+#columnRight{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    width: 100%;
+    max-width: 590px;
+    box-shadow: 1px 1px 10px 1px rgb(56,78,112);}
+
+.top{
+    color: white;
+    font-size: 30px;
+    background-color: rgb(47,175,229);
+    padding: 5px 0px 05px 0px;
+    width: 100%;}
+
+.top1, .top2, .top3{
+    color: white;
+    font-size: 30px;
+    background-color: rgb(47,175,229);
+    width: auto;
+    padding: 0px 0px 5px 0px;}
+
+#columnRight div > h1{
+    padding-left: 5px;
+    text-align: left;}
+
+#columnRight div > a,img{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-height: 100px;}
+
+#columnRight div > video{
+    padding: 0;
+    margin: 0;
+    width: 100%;}
+
+#columnRight div > ul{
+    list-style: none;
+    padding: 5px 0px 10px 5px;}
+
+#columnRight div > ol{
+    margin-left: calc(100% - 96%);
+    padding: 5px 0px 10px 5px;
+    font-size: 20px;}
+
+#columnRight div ul > li, #columnRight div ol > li{
+    padding: 10px 0px 0px 0px;
+}
+
+#columnRight div ul li > a, #columnRight div ol li > a{
+    text-decoration: none;
+    color: black;
+    padding-right: 5px;
+    font-weight: 600;
+    font-size: 20px;}
+
+#columnRight div ul li > a:hover, #columnRight div ol li > a:hover{
+    color: rgb(17, 94, 7);
+    font-size: 21px;
+    animation: linear;
+    transition: 0.1s;}
+
+#footer{
+    display: flex;
+    align-items: center;
+    align-content: flex-end;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    margin-top: 1%;
+    padding: 5px;}
+
+@media screen and (max-width: 1400px){
+
+    #container{
+        display: grid;
+        grid-gap: 0px 10px;
+        grid-template-columns: 1.5fr 1.5fr 1fr;
+        margin-top: 4%;
+        margin-left: 1%;}
+
+    .postItem{
+        background-color: rgb(47,175,229);
+        width: auto;
+        color: white;
+        padding: 5px 0px 5px 0px;
+        margin-bottom: 5px;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 900;}
+        
+    .postItem1{
+        text-decoration: none;
+        font-size: 20px;
+        color: black;
+        margin-left: 5px;}
+
+    .postItem2, .postItem3, .postItem4{
+        text-decoration: none;
+        color: black;
+        font-size: 10px;
+        font-weight: 500;}
+        
+    .postItem5{
+        font-size: 16px;
+        font-weight: 300;
+        margin-left: 5px;
+        padding-top: 5px;
+        margin-bottom: 10px;}
+        
+    .postItem6{
+        background-color: rgb(56,78,112);
+        color: white;
+        text-decoration: none;
+        padding: 8px;
+        margin-left: 5px;
+        font-weight: 600;}
+
+    .top{
+        color: white;
+        font-size: 25px;
+        background-color: rgb(47,175,229);
+        padding: 5px 0px 05px 0px;
+        width: 100%;}
+
+    .top1, .top2, .top3{
+        color: white;
+        font-size: 25px;
+        background-color: rgb(47,175,229);
+        width: auto;
+        padding: 0px 0px 5px 0px;}
+
+    #columnRight{
+        grid-column-start: 3;
+        grid-column-end: 4;
+        width: 310px;
+        box-shadow: 1px 1px 10px 1px rgb(56,78,112);}
+    
+    #columnRight div > ol{
+        margin-left: calc(100% - 91%);
+        padding: 0px 0px 0px 0px;
+        font-size: 15px;}
+    
+    #columnRight div ul li > a, #columnRight div ol li > a{
+        text-decoration: none;
+        color: black;
+        padding-right: 5px;
+        font-weight: 600;
+        font-size: 15px;}
+    
+    #columnRight div ul li > a:hover, #columnRight div ol li > a:hover{
+        color: rgb(17, 94, 7);
+        font-size: 16px;
+        animation: linear;
+        transition: 0.1s;}
+
+    .containerPost{
+        margin-bottom: 10px;
+        box-shadow: 1px 1px 10px 1px rgb(56,78,112);
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        padding: 0px 0px 20px 0px;}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
